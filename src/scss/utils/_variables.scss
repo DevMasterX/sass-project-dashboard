@@ -58,3 +58,8 @@ $font-sizes: (
   "lg": 20px,
   "xl": 24px,
 );
+
+$easings: (
+  "fast": 300ms ease,
+  "slow": 600ms ease,
+);

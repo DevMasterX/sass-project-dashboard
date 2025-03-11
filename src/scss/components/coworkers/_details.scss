@@ -1,0 +1,44 @@
+@use "../../utils/placeholders";
+@use "../../utils/variables" as var;
+@use "../../utils/functions" as fn;
+@use "../../utils/mixins" as mx;
+
+.co-workers-details {
+  @extend %details;
+
+  padding: 16px 0;
+
+  @include mx.mq("md") {
+    display: none;
+  }
+}
+
+.co-workers-data {
+  @include mx.ease("slow", margin);
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .co-workers-details[open] & {
+    margin-bottom: 16px;
+  }
+}
+
+.co-workers-icon {
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: fn.get-color("light-tertiary");
+
+  .plus {
+  }
+  .minus {
+  }
+}
